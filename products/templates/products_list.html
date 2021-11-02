@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Products List</h2>
+<ul>
+    {% for instance in object_list %}
+       <!-- <li>{{ instance.id }}. {{ instance.title }}</li> -->
+       <li> {{ instance.id }}. <a href="{{ instance.get_absolute_url }}"> {{ instance.title }} </a> </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

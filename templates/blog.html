@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% include 'navbar.html' %}
+
+<h1>Here is my blog</h1>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+ Sunt eius magnam officia maiores iure deleniti 
+minus placeat hic quam unde voluptatum inventore ipsam exercitationem quia 
+saepe ut, facilis aperiam error.</p>
+
+<p>
+    {{ my_text }}, {{ my_number }} 
+</p>
+
+<ul>
+    {% for item in my_list %}
+        {% if item == "tanya" %}
+           <li>{{ forloop.counter }} - {{ item }} is girl</li>
+        {% elif item == "Neelanshu" %}
+           <li> {{forloop.counter }} - {{ item }} is boy </li>
+        {% else %}
+           <li> {{forloop.counter }} - {{ item }} gender is unknown</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+{% endblock %}

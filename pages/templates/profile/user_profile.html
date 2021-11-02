@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+   {% include 'navbar.html' %}
+   <h4>Name: {{ object.name }} </h4>
+   <h4>Email: {{ object.email }} </h4>
+   <h4>Password: {{ object.password }} </h4>
+{% endblock %}
